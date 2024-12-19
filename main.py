@@ -29,9 +29,9 @@ IDX_TO_CLASS = {
 }
 
 # Загрузка модели
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cpu')
 model = create_model('vgg16', pretrained=False, num_classes=36)
-model.load_state_dict(torch.load('vgg16_fruit_veg_classifier.pth'))
+model.load_state_dict(torch.load('vgg16_fruit_veg_classifier.pth', map_location=device))
 model = model.to(device)
 model.eval()
 
