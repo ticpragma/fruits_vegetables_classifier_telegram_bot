@@ -8,7 +8,7 @@ RUN git clone https://github.com/ticpragma/fruits_vegetables_classifier_telegram
 
 RUN python3 -m venv venv
 
-RUN ./venv/bin/pip install --no-cache-dir -r requirements.txt
+RUN ./venv/bin/pip install -r requirements.txt
 
 RUN curl -L -o vgg16_fruit_veg_classifier.pth 'https://github.com/ticpragma/fruits_vegetables_classifier_telegram_bot/releases/download/download/vgg16_fruit_veg_classifier.pth'
 
